@@ -22,7 +22,7 @@
         }
     
         .topbar {
-            position: top;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
@@ -85,23 +85,15 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
-            margin: 20px auto;
+            margin: 80px auto 20px; /* Adjust margin to accommodate fixed topbar */
             max-width: 600px;
-            max-height: 300px;
+            width: 90%; /* Ensure responsiveness */
             overflow: auto;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -224%);
         }
     
-        
         @media (prefers-color-scheme: dark) {
             body {
                 background-image: url('https://files.enderman.ch/wallpapers/Reflection.jpg');
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-attachment: fixed;
                 color: #e0e0e0;
             }
     
@@ -124,7 +116,6 @@
             }
         }
     </style>
-    
 </head>
 <body>
     <div class="topbar">
